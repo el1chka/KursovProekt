@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="light dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Analysis Results | JobMatch AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-primary-fixed-variant": "#002b5c", "on-error": "#490006", "error-container": "#9f0519", "on-secondary-fixed-variant": "#2349ac", "surface-bright": "#132860", "surface-container-lowest": "#000000", "outline-variant": "#3b466c", "on-secondary": "#001b56", surface: "#000b2f", primary: "#7faeff", "inverse-primary": "#005db9", "surface-tint": "#7faeff", "on-secondary-container": "#c2cfff", "primary-container": "#65a1ff", "tertiary-fixed-dim": "#e190f0", "on-surface-variant": "#9eaad5", outline: "#69749d", "secondary-fixed": "#c4d0ff", "primary-fixed-dim": "#4693ff", error: "#ff716c", "primary-fixed": "#65a1ff", "on-tertiary": "#68207b", "inverse-surface": "#faf8ff", background: "#000b2f", "inverse-on-surface": "#48547a", secondary: "#7999ff", "on-secondary-fixed": "#002c82", "on-tertiary-fixed-variant": "#681f7a", "on-background": "#dfe4ff", "on-tertiary-container": "#5e1470", "tertiary-fixed": "#f09dff", "on-surface": "#dfe4ff", "on-primary-fixed": "#000000", "on-primary-container": "#00224b", "surface-container": "#051642", "surface-dim": "#000b2f", "on-tertiary-fixed": "#400050", "surface-container-low": "#011038", "on-error-container": "#ffa8a3", "surface-container-high": "#091c4c", "secondary-fixed-dim": "#b1c2ff", "tertiary-container": "#f09dff", "on-primary": "#002e60", "surface-container-highest": "#0e2256", "surface-variant": "#0e2256", "secondary-container": "#133fa1", tertiary: "#f5b2ff", "secondary-dim": "#7999ff", "primary-dim": "#0073e1", "error-dim": "#d7383b", "tertiary-dim": "#e190f0"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, fontFamily: {headline: ["Inter"], body: ["Inter"], label: ["Inter"], display: "Inter"}}}};</script>
+<style>
+        html { scroll-behavior: smooth; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<header class="fixed top-0 w-full z-50 bg-[#faf8ff]/80 dark:bg-[#191b23]/80 backdrop-blur-xl shadow-sm shadow-blue-900/5">
+<nav class="flex justify-between items-center px-8 h-16 max-w-7xl mx-auto">
+<a class="text-xl font-bold tracking-tight text-[#191b23] dark:text-[#faf8ff] font-headline" href="#summary">
+                JobMatch AI
+            </a>
+<div class="hidden md:flex items-center gap-8 font-manrope tracking-tight font-semibold">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#summary">Summary</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#strong-points">Strong Points</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#methodology">Methodology</a>
+</div>
+</nav>
+</header>
+<main class="pt-28 pb-20 px-6 max-w-7xl mx-auto">
+<div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6" id="summary">
+<div>
+<span class="text-primary font-semibold tracking-wider text-xs uppercase mb-2 block" id="report-id">Match Report</span>
+<h1 class="text-4xl md:text-5xl font-headline font-extrabold tracking-tight text-on-surface">Analysis Results</h1>
+<p class="text-on-surface-variant mt-3 max-w-xl text-lg leading-relaxed" id="report-summary">Your CV has been cross-referenced with the job description you submitted.</p>
+</div>
+<div class="flex gap-3">
+<a class="bg-surface-container-high text-primary font-semibold px-6 py-3 rounded-xl hover:bg-surface-container-highest transition-all flex items-center gap-2" href="cv-upload.html">
+<span class="material-symbols-outlined text-xl">refresh</span>
+                    Try Another Match
+                </a>
+<button class="bg-primary-container text-on-primary-container font-semibold px-6 py-3 rounded-xl hover:shadow-lg transition-all flex items-center gap-2" id="download-report-button-2" type="button">
+<span class="material-symbols-outlined text-xl">download</span>
+                    Download Report
+                </button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-8 flex flex-col gap-8">
+<div class="bg-surface-container-lowest rounded-[2rem] p-10 flex flex-col md:flex-row items-center gap-12 shadow-[0_12px_40px_-12px_rgba(25,27,35,0.06)] relative overflow-hidden" id="score-card">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-tertiary/5 rounded-full blur-3xl"></div>
+<div class="relative flex-shrink-0">
+<div class="w-48 h-48 rounded-full border-[12px] border-surface-container flex items-center justify-center relative overflow-hidden">
+<svg class="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 192 192">
+<circle class="text-surface-container-high" cx="96" cy="96" fill="transparent" r="84" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-tertiary-container" cx="96" cy="96" fill="transparent" r="84" stroke="currentColor" stroke-dasharray="527" stroke-dashoffset="79" stroke-width="12" id="score-ring"></circle>
+</svg>
+<div class="text-center">
+<span class="block text-5xl font-headline font-extrabold text-on-surface" id="score-value">0.0</span>
+<span class="text-on-surface-variant text-sm font-semibold" id="score-label">MATCH SCORE</span>
+</div>
+</div>
+<div class="absolute -bottom-2 right-2 bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-xs font-bold tracking-tight shadow-md flex items-center gap-1" id="score-badge">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span id="score-badge-label">READY TO ANALYZE</span>
+                        </div>
+</div>
+<div class="flex-1">
+<h2 class="text-2xl font-headline font-bold mb-4">AI Matching Insight</h2>
+<p class="text-on-surface-variant leading-relaxed mb-6" id="insight-text">
+                            Upload your CV and paste a job description to generate your first report.
+                        </p>
+<div class="flex flex-wrap gap-2" id="insight-tags"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container-low rounded-[1.5rem] p-8" id="strong-points">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-10 h-10 rounded-xl bg-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-container" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<h3 class="text-xl font-headline font-bold">Strong Points</h3>
+</div>
+<ul class="space-y-6" id="strong-points-list"></ul>
+</div>
+<div class="bg-surface-container-low rounded-[1.5rem] p-8" id="improvement">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-10 h-10 rounded-xl bg-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-error-container" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<h3 class="text-xl font-headline font-bold">Points of Improvement</h3>
+</div>
+<ul class="space-y-6" id="weak-points-list"></ul>
+<div class="mt-8 pt-6 border-t border-outline-variant/20">
+<button class="text-primary font-bold text-sm flex items-center gap-2 hover:translate-x-1 transition-transform" id="recommendations-button" type="button">
+                                View AI recommendations to bridge gaps
+                                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-8">
+<div class="bg-surface-container-high rounded-[2rem] p-8" id="methodology">
+<div class="w-full h-40 rounded-2xl mb-6 shadow-sm bg-surface-container relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-tertiary/20"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="text-center">
+<span class="material-symbols-outlined text-5xl text-on-surface" style="font-variation-settings: 'FILL' 1;">description</span>
+<p class="text-xs uppercase tracking-[0.3em] text-on-surface-variant mt-3">Submitted Profile</p>
+</div>
+</div>
+</div>
+<h4 class="text-xs font-bold tracking-widest text-on-surface-variant uppercase mb-4">The Opportunity</h4>
+<h3 class="text-2xl font-headline font-extrabold mb-2" id="submission-title">Your Uploaded CV and Job Description</h3>
+<p class="text-primary font-bold mb-6" id="submission-subtitle">Backend analysis complete</p>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6" id="submission-preview">The report below is generated directly from the uploaded CV and pasted job description.</p>
+<div class="text-sm text-on-surface-variant space-y-2">
+<div class="flex justify-between gap-4"><span class="uppercase tracking-widest text-[10px]">CV file</span><span class="font-semibold text-on-surface" id="submission-file">Not loaded</span></div>
+<div class="flex justify-between gap-4"><span class="uppercase tracking-widest text-[10px]">JD length</span><span class="font-semibold text-on-surface" id="submission-jd-length">0 chars</span></div>
+</div>
+<button class="w-full mt-8 bg-primary text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all" id="apply-button" type="button">
+                        Return to Analysis
+                    </button>
+</div>
+<div class="bg-primary/5 rounded-[1.5rem] p-8 border border-primary/10">
+<h4 class="text-sm font-bold text-primary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">insights</span>
+                        Match Methodology
+                    </h4>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-6">
+                        This match score is generated by the backend pipeline using your CV, your pasted job description, and the configured 10-point rubric.
+                    </p>
+<div class="grid grid-cols-2 gap-4">
+<div class="text-center p-3 bg-surface rounded-xl">
+<span class="block text-xl font-headline font-bold" id="metric-strong-count">0</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Strong Points</span>
+</div>
+<div class="text-center p-3 bg-surface rounded-xl">
+<span class="block text-xl font-headline font-bold" id="metric-weak-count">0</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Weak Points</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full py-12 bg-[#f3f3fe] dark:bg-[#1f212a] border-t-0">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-4">
+<div class="font-manrope font-bold text-blue-900 dark:text-blue-100">
+                JobMatch AI
+            </div>
+<div class="flex gap-8 font-inter text-sm tracking-normal">
+<a class="text-slate-500 dark:text-slate-400 hover:underline transition-all" href="#summary">Summary</a>
+<a class="text-slate-500 dark:text-slate-400 hover:underline transition-all" href="#strong-points">Strong Points</a>
+<a class="text-slate-500 dark:text-slate-400 hover:underline transition-all" href="#methodology">Methodology</a>
+</div>
+<div class="text-slate-500 dark:text-slate-400 font-inter text-sm">
+                © 2024 JobMatch AI. The Intelligent Curator.
+            </div>
+</div>
+</footer>
+<script src="js/results.js"></script>
+</body>
+</html>

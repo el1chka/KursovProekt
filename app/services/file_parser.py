@@ -7,6 +7,7 @@ from docx import Document
 from fastapi import UploadFile
 from PyPDF2 import PdfReader
 
+from app.core.config import get_settings
 from app.core.exceptions import ParsingError, ValidationError
 
 SUPPORTED_SUFFIXES = {".pdf", ".docx"}
@@ -22,6 +23,8 @@ async def parse_cv_file(upload: UploadFile) -> str:
     file_bytes = await upload.read()
     if not file_bytes:
         raise ValidationError("Uploaded CV file is empty.")
+
+    _validate_file_size(file_bytes)
 
     if suffix == ".pdf":
         text = _extract_pdf_text(file_bytes)
@@ -52,3 +55,14 @@ def _extract_docx_text(file_bytes: bytes) -> str:
         return "\n".join(paragraph.text for paragraph in document.paragraphs)
     except Exception as exc:
         raise ParsingError("Failed to parse DOCX file.") from exc
+
+
+def _validate_file_size(file_bytes: bytes) -> None:
+    """Reject CV uploads that exceed the configured maximum size."""
+
+    settings = get_settings()
+    max_bytes = settings.max_cv_file_size_mb * 1024 * 1024
+    if len(file_bytes) > max_bytes:
+        raise ValidationError(
+            f"Uploaded CV file exceeds the {settings.max_cv_file_size_mb} MB limit."
+        )

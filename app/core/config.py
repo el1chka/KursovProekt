@@ -16,6 +16,8 @@ class Settings(BaseSettings):
         alias="CF_MODEL",
     )
     request_timeout_seconds: float = Field(default=30.0, alias="REQUEST_TIMEOUT")
+    max_cv_file_size_mb: int = Field(default=10, alias="MAX_CV_FILE_SIZE_MB")
+    cv_session_ttl_minutes: int = Field(default=120, alias="CV_SESSION_TTL_MINUTES")
 
     model_config = SettingsConfigDict(
         env_file=".env",

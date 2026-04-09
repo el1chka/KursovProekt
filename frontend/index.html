@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JobMatch AI - Elevate Your Career with Precision</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#68207b",
+                        "secondary": "#7999ff",
+                        "surface-dim": "#000b2f",
+                        "tertiary-dim": "#e190f0",
+                        "surface-bright": "#132860",
+                        "error-dim": "#d7383b",
+                        "tertiary-container": "#f09dff",
+                        "primary-fixed-dim": "#4693ff",
+                        "tertiary-fixed": "#f09dff",
+                        "primary-container": "#65a1ff",
+                        "background": "#000b2f",
+                        "secondary-fixed": "#c4d0ff",
+                        "primary": "#7faeff",
+                        "secondary-dim": "#7999ff",
+                        "outline-variant": "#3b466c",
+                        "surface-tint": "#7faeff",
+                        "on-background": "#dfe4ff",
+                        "secondary-fixed-dim": "#b1c2ff",
+                        "surface": "#000b2f",
+                        "on-tertiary-fixed-variant": "#681f7a",
+                        "secondary-container": "#133fa1",
+                        "on-error-container": "#ffa8a3",
+                        "surface-container-highest": "#0e2256",
+                        "tertiary-fixed-dim": "#e190f0",
+                        "surface-container-lowest": "#000000",
+                        "on-secondary-fixed": "#002c82",
+                        "on-primary": "#002e60",
+                        "on-secondary-fixed-variant": "#2349ac",
+                        "surface-variant": "#0e2256",
+                        "on-secondary": "#001b56",
+                        "inverse-on-surface": "#48547a",
+                        "on-secondary-container": "#c2cfff",
+                        "surface-container": "#051642",
+                        "inverse-surface": "#faf8ff",
+                        "error": "#ff716c",
+                        "tertiary": "#f5b2ff",
+                        "error-container": "#9f0519",
+                        "on-surface": "#dfe4ff",
+                        "primary-dim": "#0073e1",
+                        "outline": "#69749d",
+                        "on-primary-fixed": "#000000",
+                        "surface-container-low": "#011038",
+                        "surface-container-high": "#091c4c",
+                        "on-tertiary-fixed": "#400050",
+                        "on-surface-variant": "#9eaad5",
+                        "primary-fixed": "#65a1ff",
+                        "inverse-primary": "#005db9",
+                        "on-primary-container": "#00224b",
+                        "on-error": "#490006",
+                        "on-tertiary-container": "#5e1470",
+                        "on-primary-fixed-variant": "#002b5c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: #000b2f; color: #dfe4ff; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-card { background: rgba(14, 34, 86, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(105, 116, 157, 0.2); }
+    .drag-over { border-color: rgba(127, 174, 255, 0.6) !important; box-shadow: 0 0 0 1px rgba(127, 174, 255, 0.2); }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+<header class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800 shadow-xl">
+<nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto font-inter antialiased">
+<a class="text-2xl font-bold tracking-tighter text-blue-500 dark:text-blue-400" href="#hero">JobMatch AI</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-blue-500 font-semibold border-b-2 border-blue-500 pb-1" href="#features">Features</a>
+<a class="text-slate-400 hover:text-slate-100 transition-colors" href="#how-it-works">How It Works</a>
+<a class="text-slate-400 hover:text-slate-100 transition-colors" href="#solutions">Solutions</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="bg-primary text-on-primary px-5 py-2 rounded font-semibold hover:opacity-80 transition-opacity active:scale-95 duration-150" href="cv-upload.html">Get Started</a>
+</div>
+</nav>
+</header>
+<main class="pt-24">
+<section id="hero" class="relative px-6 py-20 md:py-32 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary/20 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-tertiary/20 blur-[120px] rounded-full"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto flex flex-col items-center text-center">
+<span class="inline-block px-4 py-1.5 rounded-full bg-surface-container-high border border-outline-variant text-secondary font-medium text-sm mb-6">
+                    New: GPT-4o Powered Matching
+                </span>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 max-w-4xl leading-[1.1]">
+                    Land Your Dream Job with <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary">AI Precision</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
+                    Instantly analyze your CV against any job description. Get deep insights, match scores, and automated tailoring to stand out from the crowd.
+</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/20 hover:opacity-90 active:scale-95 transition-all" href="cv-upload.html">
+                        Get Started for Free
+                    </a>
+</div>
+<div class="mt-16 w-full max-w-5xl">
+<img class="rounded-2xl shadow-2xl border border-outline-variant w-full object-cover aspect-[16/9]" data-alt="Futuristic software dashboard displaying AI recruitment analytics with vibrant glowing blue and purple charts and user profiles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOvSkJ9xFan13_SwJQCI_QMMYnchrC0-0NRoGfB154xvmueWWtcrlfKJzuGOaAtJoHvRJnB_VjGjnn8v0KclkqtRbklzVh2zr4yQ_gI7AQugHS0XTKMu84qMoUfmLCfAMoJj2SfYFXEy-aSgGudAyhH7DfJTQkaSYk9BjzbjqFl1idlDIUARz0nJHZ6pBEtCNgeEwUdWL91Tw_bQYUFzQCwBzAHEsTIlwColL899Wqlxe6_uh8IUA70r8PrlxnLU6tem_fnViD_HU"/>
+</div>
+</div>
+</section>
+<section id="analysis" class="py-24 px-6 max-w-7xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-4xl font-bold mb-4">Analyze Your Match</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Upload your CV first, then paste the job description to get a structured compatibility report.</p>
+</div>
+<div class="grid lg:grid-cols-2 gap-8 items-start">
+<div class="glass-card p-8 rounded-2xl h-full flex flex-col gap-6" id="cv-card">
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-primary text-on-primary font-bold">1</span>
+<div>
+<h3 class="text-xl font-bold">Upload CV</h3>
+<p class="text-on-surface-variant text-sm">Supported formats: PDF and DOCX, up to 10 MB.</p>
+</div>
+</div>
+<label class="group flex flex-col items-center justify-center gap-4 rounded-2xl border border-dashed border-outline-variant bg-surface-container-low/60 px-6 py-14 text-center hover:border-primary/60 transition-colors cursor-pointer" for="cv-file">
+<span class="material-symbols-outlined text-5xl text-primary" data-icon="upload_file">upload_file</span>
+<div>
+<p class="font-semibold text-lg">Drop your CV here or browse</p>
+<p class="text-sm text-on-surface-variant">Choose a PDF or DOCX file from your device.</p>
+</div>
+<div id="cv-file-name" class="text-sm text-secondary font-medium">No file selected</div>
+</label>
+<input id="cv-file" class="hidden" type="file" accept=".pdf,.docx"/>
+<p id="cv-error" class="hidden text-sm text-error"></p>
+<button id="proceed-button" class="bg-primary text-on-primary px-6 py-3 rounded-xl font-bold hover:opacity-90 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed" disabled type="button">Proceed</button>
+</div>
+<div id="jd-step" class="glass-card p-8 rounded-2xl h-full flex flex-col gap-6 hidden">
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-tertiary-container text-on-tertiary-container font-bold">2</span>
+<div>
+<h3 class="text-xl font-bold">Paste Job Description</h3>
+<p class="text-on-surface-variant text-sm">Minimum 50 characters. Plain text only, no URLs.</p>
+</div>
+</div>
+<textarea id="jd-text" class="min-h-[260px] w-full rounded-2xl bg-surface-container-low border border-outline-variant px-4 py-4 text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/60 resize-y" placeholder="Paste the job description here..."></textarea>
+<p id="jd-error" class="hidden text-sm text-error"></p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button id="analyze-button" class="bg-primary text-on-primary px-6 py-3 rounded-xl font-bold hover:opacity-90 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed" type="button">Analyze</button>
+<a class="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-outline-variant text-on-surface-variant hover:text-on-surface hover:border-primary/60 transition-colors" href="#hero">Back to top</a>
+</div>
+<p id="analysis-status" class="text-sm text-on-surface-variant"></p>
+</div>
+</div>
+</section>
+<section class="py-12 border-y border-outline-variant/30 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<p class="text-center text-on-surface-variant font-medium text-sm mb-10 uppercase tracking-widest">Trusted by candidates at</p>
+<div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
+<div class="text-xl font-bold grayscale hover:grayscale-0 transition cursor-default">GOOGLE</div>
+<div class="text-xl font-bold grayscale hover:grayscale-0 transition cursor-default">META</div>
+<div class="text-xl font-bold grayscale hover:grayscale-0 transition cursor-default">AIRBNB</div>
+<div class="text-xl font-bold grayscale hover:grayscale-0 transition cursor-default">MICROSOFT</div>
+<div class="text-xl font-bold grayscale hover:grayscale-0 transition cursor-default">AMAZON</div>
+</div>
+</div>
+</section>
+<section id="how-it-works" class="py-24 px-6 max-w-7xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="text-4xl font-bold mb-4">Precision in 3 Steps</h2>
+<p class="text-on-surface-variant">Elevate your application from standard to standout in minutes.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="relative group">
+<div class="absolute -top-4 -left-4 w-12 h-12 bg-primary rounded-xl flex items-center justify-center font-bold text-on-primary shadow-lg z-10">1</div>
+<div class="glass-card p-8 rounded-2xl h-full flex flex-col gap-4 group-hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="upload_file">upload_file</span>
+<h3 class="text-xl font-bold">Upload CV</h3>
+<p class="text-on-surface-variant text-sm">Drag and drop your PDF or DOCX. Our backend extracts text and validates the file before analysis.</p>
+<div class="mt-4 overflow-hidden rounded-lg">
+<img class="w-full h-32 object-cover" data-alt="Clean minimalist interface for file upload with a blue glowing drag and drop area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEP_StOgUa72wpdKxW_YWxpLJTktT-bNcgud3NXnXbpa96bx6HZIBo9xDIG6ul83wbJLU58Vqy_dSGG4QPOtAT2nJo-YVTOol3u-qKlOQfpFC1bvPPSfFBUm1Ux-tuDQmeI4hPXGIEkuhz2TlAwsUQ5uoFquGNlNAOFNluBMBkYlBgTYtXmu24_ESWiGJhmurj7X31D3CnNTHFCM-xui2a8C65je2UUN-WUuYaudMNoPKiRftut9MUZSiChEZe5gr-kZ-sqtSPI6A"/>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -top-4 -left-4 w-12 h-12 bg-primary rounded-xl flex items-center justify-center font-bold text-on-primary shadow-lg z-10">2</div>
+<div class="glass-card p-8 rounded-2xl h-full flex flex-col gap-4 group-hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="content_paste">content_paste</span>
+<h3 class="text-xl font-bold">Paste Job Description</h3>
+<p class="text-on-surface-variant text-sm">Input the role details. Our validation keeps the text clean, plain, and ready for scoring.</p>
+<div class="mt-4 overflow-hidden rounded-lg">
+<img class="w-full h-32 object-cover" data-alt="Digital representation of text analysis with highlighting and code-like syntax highlighting on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqPvf-OBTPWr0tXN5IRuWZCvTw_X_R9CYfe8o3p9Kv4owXy3zNvl4A3g5J_-lPjX_qjs9naTrtGmDzVKzFhmyCZ43PfouEsbabjSBtEWnmFF6Ng7lU2Ng3yNCGTnTKu-wLPc0cw6Xxb3sXRjrVVrxtRBcBXIH1sb9fuB67n5Id_ohiSYEO4_s5cMxX0sP_dJbm5dsXIPB_9uonNJHdufPV9A1sSt0umccmVObTNH-uy0KCg3VifbwXOA_a628B6iy7e2zDNZwxNzo"/>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -top-4 -left-4 w-12 h-12 bg-primary rounded-xl flex items-center justify-center font-bold text-on-primary shadow-lg z-10">3</div>
+<div class="glass-card p-8 rounded-2xl h-full flex flex-col gap-4 group-hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="analytics">analytics</span>
+<h3 class="text-xl font-bold">Get AI Match Score</h3>
+<p class="text-on-surface-variant text-sm">Receive a structured compatibility report with a score, strong points, and weak points.</p>
+<div class="mt-4 overflow-hidden rounded-lg">
+<img class="w-full h-32 object-cover" data-alt="Circular progress meter showing a high match percentage with green and blue neon light effects" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABuE9e4qyFT0wToOXshchcaRV_fJkB_AtEHIq8DaxkNqifSg2M8UJp7jchPgrZTEeDSEqlc5YiCidVvPIV6UwIcOmPCMFRH99vVbV5j_h9qWpwiih-MSqxvehotbg0N1JxgxsG723bhfH9XMrdT2n8v7ryP1olMJ9XhzOmjuH6OGuEr3j15UI0ECxWOcIqHhnWiP__VMEg4SorHxiSEOPmDcMasjAdYg_QDeH0B480aLiWqaVz533rnvi74mfdCprA4iZRWiQbwNw"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="solutions" class="py-24 px-6 bg-surface-container-low/50">
+<div class="max-w-7xl mx-auto">
+<div class="grid md:grid-cols-12 gap-6 grid-rows-2">
+<div class="md:col-span-8 glass-card p-10 rounded-2xl flex flex-col md:flex-row items-center gap-8 group">
+<div class="flex-1">
+<div class="w-12 h-12 bg-primary-container rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="robot_2">robot_2</span>
+</div>
+<h3 class="text-3xl font-bold mb-4">AI Matching Engine</h3>
+<p class="text-on-surface-variant mb-6">Our backend uses a 10-point universal rubric to evaluate hard skills, experience, soft skills, and baseline requirements.</p>
+<ul class="space-y-2 text-sm">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> Keyword density analysis</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> Contextual experience mapping</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> Seniority level verification</li>
+</ul>
+</div>
+<div class="flex-1 w-full">
+<img class="rounded-xl shadow-lg border border-outline-variant w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Abstract visualization of neural networks connecting data points representing skills and job requirements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe6C0NuZo5_nnZqxmB5zdvzoeMsJ5o3EJlWMFdwwB7D1QksAMDwtf-VZ9bqYHQDF9lI1g5eGJD-lJw_FTH0b2r4ov_j-RHBHM-Pt8k6ZwSW4YT3kyZA9uGEC7aVpYC65ZbBS-5E9WT_gUYENO41bTmA6FrEXcjwE9fHCQBq99mNpNZE6EvkhPFZvfv7rlm80GGd5NxFW2PLRbX7BeqSWjOzL2pK1gmqtyRn6CAvmpDqTvFBVdn0-YwwV25NhbttB-VFrAbWlfGOUY"/>
+</div>
+</div>
+<div class="md:col-span-4 glass-card p-10 rounded-2xl flex flex-col group overflow-hidden">
+<div class="w-12 h-12 bg-tertiary-container rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="auto_fix_high">auto_fix_high</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Smart Rewriting</h3>
+<p class="text-on-surface-variant mb-4">One-click suggestions to rephrase your achievements to match the job's specific tone and vocabulary.</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/30">
+<img class="rounded-lg shadow-inner group-hover:-translate-y-2 transition-transform duration-500" data-alt="Interface snippet showing text being automatically transformed from plain to professional corporate style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgmHBpEKsFDYp5lJMVG0fwoUuCCPloix6NRX_DNqZmDVNxn3CxM2wvIOGolUlofBMI5ybbMZuawEwDda38QXbzV5butEN4uwvZs3TOKKzOdL23Irx_aY499O2xaExX5TaXrR8zGwjtR41MvX0emdFVVfeGUGjqBCRJwI--0hSEqxq1brT83uai6T8ZGp2g9NRarbYN8WogNkMOgu6hbdzqqgAL8y1jFg7NSwHOsqBjybaezi41Lz6D9LYEc5K0GebEv_KWslejsg8"/>
+</div>
+</div>
+<div class="md:col-span-4 glass-card p-10 rounded-2xl flex flex-col group">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="query_stats">query_stats</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Market Benchmarking</h3>
+<p class="text-on-surface-variant">See how your profile stacks up against the average applicant for similar roles in real-time.</p>
+<div class="mt-auto h-32 flex items-end gap-2 px-2">
+<div class="w-full bg-outline-variant h-1/2 rounded-t"></div>
+<div class="w-full bg-outline-variant h-2/3 rounded-t"></div>
+<div class="w-full bg-primary h-full rounded-t shadow-[0_0_15px_rgba(127,174,255,0.4)]"></div>
+<div class="w-full bg-outline-variant h-1/3 rounded-t"></div>
+</div>
+</div>
+<div class="md:col-span-8 glass-card p-10 rounded-2xl flex flex-col md:flex-row-reverse items-center gap-8 group">
+<div class="flex-1">
+<div class="w-12 h-12 bg-surface-container-highest rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="shield_person">shield_person</span>
+</div>
+<h3 class="text-3xl font-bold mb-4">Privacy First</h3>
+<p class="text-on-surface-variant mb-6">Your data is yours. The backend keeps your analysis local to your session unless you refresh or start a new match.</p>
+<a class="text-primary font-semibold flex items-center gap-2 hover:underline" href="#analysis">Start an analysis <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<div class="flex-1 w-full">
+<img class="rounded-xl border border-outline-variant w-full h-64 object-cover" data-alt="Cybersecurity concept with glowing digital lock and shield overlays on a dark mesh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjYWu1v6wYSRhF60mo5BgKGqgTYf0uV5pnFK1YELL_OxXh-1KvqbUjr41XWaEFF5D73BGPpDh2LRyBERlnRs8UYlyOtgQeKYrIV9RzetcExEt0NHOQUrcfG1HgmX53HLMdZiwzKaytPlSpsLsvlfvO5mtRsW2OUY4WSmQvjAn8CmKjL8gSht7Hi0VExNvSWTcvsCF1VZ0WDBQXx4SJbbHvwEq3XlymBVbnpABgS6_IaUo-X-xnliFbIhlRB7e6wY8vsBtG-Ajl31I"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-4xl font-bold text-center mb-16">Success Stories</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="glass-card p-8 rounded-2xl relative">
+<span class="material-symbols-outlined text-primary-container absolute top-6 right-6 text-4xl opacity-20" data-icon="format_quote">format_quote</span>
+<p class="text-on-surface mb-8 italic">"I was struggling to get past the ATS at big tech firms. JobMatch AI showed me exactly what was missing in my skills section. Landed an interview at Google within 2 weeks!"</p>
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of a smiling professional man in his 30s with short hair wearing a navy shirt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN8Z71dp_cEKXBAbjmTaMcu53_SnmGo8iQeLuUz9G7gUi0g-KIwFLqyA1gFvtkFZFuVJKfU7MKbDbso9T4w3Frs6Z30dnQN7J1nkoHhPm1hrnVOkete0bPxxiYOiqsrOqLGVUS48GR5gnHGqooIHLAnBR_hIr8RmG6WrF4u9FrFvy2DVee0Cj5XU6WCqsDQ9KEM_kNzBlLYCWvG5O8FQ5ASLTPteAsYlwzfuks1e3IiY5YD_s_OwS7odIfQsdiwDEWYowMjHTCuTI"/>
+<div>
+<p class="font-bold">David Chen</p>
+<p class="text-sm text-on-surface-variant">Senior Software Engineer</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-8 rounded-2xl relative">
+<span class="material-symbols-outlined text-primary-container absolute top-6 right-6 text-4xl opacity-20" data-icon="format_quote">format_quote</span>
+<p class="text-on-surface mb-8 italic">"The smart rewriting feature is a game changer. It helped me translate my military experience into corporate-speak that recruiters actually understand."</p>
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of a young professional woman with long dark hair smiling at the camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2Qf9taEp3NWfmlxenWYd02-kKINIa9XE72ctmxJ3aSZgn5kw8YHBUnfF95RXUkgIzn2xdsFFP8DQD8rpgRkVp1xo99BJH_eIfTVstx4LgsGRkpDDSjFZqw28OD54fMtXzrm3dAxACWe-I20WgSo0cvQEqsefC6hFgXaihgTGE3UBq2bJV9cIekbL06h4EDRwzcZ4MMpP71BUxTP4HVuRIZE5PltcYiOOan5fhxr54keHzPktErbVN-l2NOmRqWlQRpPW5G32HFC4"/>
+<div>
+<p class="font-bold">Sarah Jenkins</p>
+<p class="text-sm text-on-surface-variant">Operations Manager</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-8 rounded-2xl relative border-primary/30">
+<span class="material-symbols-outlined text-primary-container absolute top-6 right-6 text-4xl opacity-20" data-icon="format_quote">format_quote</span>
+<p class="text-on-surface mb-8 italic">"The benchmark tool gave me the confidence to negotiate a 20% higher salary because I knew exactly where I stood in the applicant pool."</p>
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of a confident man with a beard wearing glasses and a formal jacket" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZG40Fpg-dwmamuYz20RbrR4cI7QK8GHCCOLkL9030_GFmTYuOAFs5HdIc0w8IeANsqHzDvrAtEBQYaVoP1FBR9UghJsZo4WDwuJz5p33VXliG4KL9gXv7H1zr_hLCKGMnNcZ9dEkaBF5Rnld2Cyii6bc8fxdGNhRtxSEU_hS26Ej1AmUyLvNEFUqTqQNEEkXOAZMsNvPPZPhEhweOgznRYF6svkCOY4SaiVoZPy7DQCNSpuIcf7KgzERTTqclndK6DAHJAqZnWJ0"/>
+<div>
+<p class="font-bold">Marcus Thorne</p>
+<p class="text-sm text-on-surface-variant">Product Designer</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/10 rounded-[3rem] mx-6"></div>
+<div class="relative z-10 max-w-4xl mx-auto text-center">
+<h2 class="text-4xl md:text-5xl font-extrabold mb-6">Ready to find your perfect match?</h2>
+<p class="text-on-surface-variant text-lg mb-10">Submit a CV and a job description to generate your first compatibility report.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<a class="bg-primary text-on-primary px-10 py-4 rounded-xl font-bold text-lg hover:brightness-110 active:scale-95 transition-all" href="cv-upload.html">
+                        Start Now
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-slate-950 border-t border-slate-800 w-full rounded-none mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 gap-6 max-w-7xl mx-auto font-inter text-sm">
+<div class="flex flex-col gap-2">
+<div class="text-lg font-bold text-slate-100">JobMatch AI</div>
+<p class="text-slate-500 max-w-xs">© 2024 JobMatch AI. Empowering recruitment with intelligence.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-500 hover:text-blue-400 transition-colors" href="#analysis">Privacy Policy</a>
+<a class="text-slate-500 hover:text-blue-400 transition-colors" href="#how-it-works">Terms of Service</a>
+<a class="text-slate-500 hover:text-blue-400 transition-colors" href="#solutions">Careers</a>
+<a class="text-slate-500 hover:text-blue-400 transition-colors" href="#hero">Blog</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary/20 transition-colors" href="#hero">
+<span class="material-symbols-outlined text-slate-400" data-icon="language">language</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary/20 transition-colors" href="#analysis">
+<span class="material-symbols-outlined text-slate-400" data-icon="alternate_email">alternate_email</span>
+</a>
+</div>
+</div>
+</footer>
+<script src="js/landing.js"></script>
+</body>
+</html>

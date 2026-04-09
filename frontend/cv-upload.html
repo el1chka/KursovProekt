@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CV Upload - JobMatch AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#011038",
+                    "surface-container-high": "#091c4c",
+                    "on-surface": "#dfe4ff",
+                    "primary": "#7faeff",
+                    "surface-container-highest": "#0e2256",
+                    "on-tertiary-container": "#5e1470",
+                    "surface-tint": "#7faeff",
+                    "error": "#ff716c",
+                    "primary-dim": "#0073e1",
+                    "error-container": "#9f0519",
+                    "tertiary-fixed": "#f09dff",
+                    "tertiary-fixed-dim": "#e190f0",
+                    "on-primary-container": "#00224b",
+                    "primary-fixed-dim": "#4693ff",
+                    "secondary-fixed-dim": "#b1c2ff",
+                    "on-primary-fixed": "#000000",
+                    "background": "#000b2f",
+                    "tertiary-container": "#f09dff",
+                    "surface-container-lowest": "#000000",
+                    "secondary-fixed": "#c4d0ff",
+                    "surface": "#000b2f",
+                    "primary-fixed": "#65a1ff",
+                    "on-surface-variant": "#9eaad5",
+                    "surface-dim": "#000b2f",
+                    "outline": "#69749d",
+                    "on-secondary-fixed-variant": "#2349ac",
+                    "on-primary-fixed-variant": "#002b5c",
+                    "on-tertiary-fixed-variant": "#681f7a",
+                    "surface-container": "#051642",
+                    "secondary": "#7999ff",
+                    "tertiary": "#f5b2ff",
+                    "on-error": "#490006",
+                    "on-background": "#dfe4ff",
+                    "primary-container": "#65a1ff",
+                    "on-tertiary-fixed": "#400050",
+                    "secondary-dim": "#7999ff",
+                    "error-dim": "#d7383b",
+                    "inverse-surface": "#faf8ff",
+                    "secondary-container": "#133fa1",
+                    "on-secondary": "#001b56",
+                    "on-secondary-container": "#c2cfff",
+                    "tertiary-dim": "#e190f0",
+                    "on-secondary-fixed": "#002c82",
+                    "surface-variant": "#0e2256",
+                    "surface-bright": "#132860",
+                    "on-error-container": "#ffa8a3",
+                    "inverse-primary": "#005db9",
+                    "inverse-on-surface": "#48547a",
+                    "outline-variant": "#3b466c",
+                    "on-tertiary": "#68207b",
+                    "on-primary": "#002e60"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: #000b2f; color: #dfe4ff; }
+        .glass-panel {
+            background: rgba(14, 34, 86, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(158, 170, 213, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .drag-over {
+            border-color: rgba(127, 174, 255, 0.75) !important;
+            box-shadow: 0 0 0 1px rgba(127, 174, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="antialiased">
+<header class="bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<a class="text-xl font-extrabold tracking-tight text-blue-600 dark:text-blue-500" href="#hero">JobMatch AI</a>
+<nav class="hidden md:flex items-center gap-8 font-inter antialiased text-sm font-medium">
+<a class="text-blue-600 dark:text-blue-500 border-b-2 border-blue-600 dark:border-blue-500 pb-1 hover:text-blue-500 dark:hover:text-blue-400 transition-all duration-200 active:scale-95 cursor-pointer" href="#hero">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all duration-200 active:scale-95 cursor-pointer" href="#upload-step">How it Works</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all duration-200 active:scale-95 cursor-pointer" href="#features">Solutions</a>
+</nav>
+</div>
+</header>
+<main class="relative overflow-hidden">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] pointer-events-none opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
+<section id="hero" class="relative pt-16 pb-24 px-6 max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm" data-icon="auto_awesome">auto_awesome</span>
+                        AI-Powered Career Matching
+                    </div>
+<h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-on-surface leading-[1.1]">
+                        Get Hired with <span class="text-primary">AI-Powered</span> Precision
+                    </h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                        Upload your CV first. The backend will extract the text, keep a temporary session, and move you to the job description step.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<div class="flex items-center gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            No Login Required
+                        </div>
+<div class="flex items-center gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            ATS Optimized
+                        </div>
+<div class="flex items-center gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            100% Private
+                        </div>
+</div>
+</div>
+<div class="relative" id="upload-step">
+<div class="glass-panel p-8 rounded-2xl shadow-2xl space-y-6">
+<div class="space-y-2">
+<h3 class="text-xl font-bold text-on-surface">Upload your CV</h3>
+<p class="text-sm text-on-surface-variant">We support PDF and DOCX formats up to 10MB.</p>
+</div>
+<div id="cv-drop-zone" class="group relative border-2 border-dashed border-outline-variant rounded-xl p-10 flex flex-col items-center justify-center text-center gap-4 hover:border-primary transition-colors cursor-pointer bg-surface-container-low/50">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="upload_file">upload_file</span>
+</div>
+<div>
+<p class="text-on-surface font-semibold">Drop your file here</p>
+<p class="text-sm text-on-surface-variant">or <span class="text-primary">browse files</span></p>
+</div>
+<div id="cv-file-name" class="text-sm text-primary font-semibold">No file selected</div>
+<input id="cv-file-input" class="hidden" type="file" accept=".pdf,.docx"/>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium text-on-surface">Selected CV</span>
+<span id="cv-status-label" class="text-xs text-primary font-bold uppercase tracking-wider">Waiting</span>
+</div>
+<p id="cv-error" class="hidden text-sm text-error"></p>
+<button id="continue-button" class="w-full py-4 bg-primary text-on-primary font-bold rounded-lg shadow-lg shadow-primary/20 hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed" disabled type="button">
+                            Proceed to Job Description
+                            <span class="material-symbols-outlined" data-icon="arrow_forward" style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="features" class="py-24 bg-surface-container-low/30 border-y border-outline-variant/30">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
+<h2 class="text-4xl font-extrabold text-on-surface">The Intelligent Curator</h2>
+<p class="text-on-surface-variant text-lg">Our engine doesn't just scan; it understands your professional narrative to position you for the next step.</p>
+</div>
+<div class="grid md:grid-cols-12 gap-6">
+<div class="md:col-span-8 glass-panel p-8 rounded-2xl flex flex-col md:flex-row gap-8 items-center overflow-hidden">
+<div class="space-y-4 flex-1">
+<div class="w-12 h-12 rounded-lg bg-tertiary/10 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="radar">radar</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface">Real-time Match Radar</h3>
+<p class="text-on-surface-variant">Instant gap analysis between your CV and the job requirements. We highlight exactly where you shine and where you need a boost.</p>
+</div>
+<div class="w-full md:w-64 h-48 rounded-xl overflow-hidden bg-surface-container-highest relative">
+<img class="w-full h-full object-cover opacity-60" data-alt="abstract data visualization showing scanning radar patterns in shades of neon blue and purple" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX1cL63C_tdGnTPAsDuOOId7ZdyoIEvOZ9UCPYICPkNGEjKS2NrL-1WDRnZMJlQHzhRwf_1Yjso8j40nSheAT2wfcRx_n-hQTkyi5CH9cETRkxlYcrbCP2H6VeFgdZ1k2eMySC6sXwz2JLiqrxP3HukUxnPuf1ldLmBfewxXzWSOL4nHFoHFlAvcX1zH8uQlSpUDNvf2LNmH6X8LGIKR-Ed6vIViu5xdLhg5493o6olxFzcnkikXtjEdiMVXpladXg2kvBgQNRgDw"/>
+</div>
+</div>
+<div class="md:col-span-4 glass-panel p-8 rounded-2xl space-y-4 border-l-4 border-primary">
+<div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="security" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface">Privacy First</h3>
+<p class="text-on-surface-variant">Your data is yours. We use temporary sessions and never keep your personal documents longer than needed for analysis.</p>
+</div>
+<div class="md:col-span-4 glass-panel p-8 rounded-2xl space-y-4">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface">Smart Rewriting</h3>
+<p class="text-on-surface-variant">Automatically refine your bullet points to match executive-level vocabulary and high-impact terminology.</p>
+</div>
+<div class="md:col-span-8 glass-panel p-8 rounded-2xl flex flex-col md:flex-row-reverse gap-8 items-center overflow-hidden">
+<div class="space-y-4 flex-1">
+<div class="w-12 h-12 rounded-lg bg-primary-container/10 text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface">Market Benchmarking</h3>
+<p class="text-on-surface-variant">Compare your profile against top performers in your industry to understand your market value and competitive edge.</p>
+</div>
+<div class="w-full md:w-64 h-48 rounded-xl overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover opacity-60" data-alt="clean minimal business analytics dashboard showing growth charts and professional metrics in a dark interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2Kuc2T0A5FBG1IpEEoj6JsnI0NdyzL32jZg2Sk4QFO1Uh-meR49EzgP3XQ8nljgH-7-McqhRU2hdulBwoH09BL8REz-afpsiSkGc-UgT6gcwwFY2392GAk3evblFya5DjppZYSFvx4uKZ4RGCS2hggySwcCh85qXF-C4V6Izu8BMV49kk1CAdGLSUK-cOmJ0kygsCsgGL2rI2m4YkvQaOHeyMaPFDZauagmr1496Na1PVfPwRNcuHqrSCvirbhJrLtmC3FC0SOfo"/>
+</div>
+</div>
+</div>
+</section>
+<section id="cta" class="py-24 px-6 text-center max-w-4xl mx-auto relative">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-tertiary rounded-full blur-[120px] opacity-10"></div>
+<div class="relative z-10 space-y-10">
+<h2 class="text-4xl md:text-5xl font-extrabold text-on-surface leading-tight">Ready to Land Your Dream Role?</h2>
+<p class="text-xl text-on-surface-variant">Join professionals who use JobMatch AI to move from CV upload to job analysis in a focused workflow.</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<a class="px-10 py-5 bg-white text-background font-bold rounded-full hover:bg-on-surface-variant transition-colors flex items-center gap-2 group" href="#upload-step">
+                        Upload CV Now
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="px-10 py-5 border border-outline text-on-surface font-bold rounded-full hover:bg-surface-container-high transition-colors" href="job-description.html">
+                        Skip to JD Step
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 flat no shadows">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 max-w-7xl mx-auto gap-4">
+<div class="text-lg font-bold text-slate-900 dark:text-slate-100">JobMatch AI</div>
+<div class="flex gap-8 font-inter text-xs tracking-wide">
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-500 dark:hover:text-blue-400 transition-colors opacity-100 hover:opacity-80" href="#hero">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-500 dark:hover:text-blue-400 transition-colors opacity-100 hover:opacity-80" href="#features">Terms of Service</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-500 dark:hover:text-blue-400 transition-colors opacity-100 hover:opacity-80" href="#cta">Contact</a>
+</div>
+<p class="font-inter text-xs tracking-wide text-slate-500 dark:text-slate-500">© 2024 JobMatch AI. All rights reserved.</p>
+</div>
+</footer>
+<script src="js/cv-upload.js"></script>
+</body></html>

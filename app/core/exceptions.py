@@ -29,3 +29,10 @@ class UpstreamServiceError(ApplicationError):
 
     def __init__(self, message: str, status_code: int = 502) -> None:
         super().__init__(message=message, status_code=status_code)
+
+
+class SessionNotFoundError(ApplicationError):
+    """Raised when a temporary CV session token cannot be resolved."""
+
+    def __init__(self, message: str) -> None:
+        super().__init__(message=message, status_code=404)

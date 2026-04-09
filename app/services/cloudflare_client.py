@@ -1,5 +1,6 @@
 """Asynchronous client for Cloudflare Workers AI chat model calls."""
 
+import json
 from typing import Any
 
 import httpx
@@ -35,11 +36,16 @@ class CloudflareAiClient:
             response = await client.post(url, json=payload, headers=headers)
 
         if response.status_code >= 400:
+            error_message = _extract_error_message(response)
             raise UpstreamServiceError(
-                f"Cloudflare AI request failed with status {response.status_code}."
+                f"Cloudflare AI request failed with status {response.status_code}: {error_message}"
             )
 
-        data = response.json()
+        try:
+            data = response.json()
+        except json.JSONDecodeError as exc:
+            raise UpstreamServiceError("Cloudflare AI returned a non-JSON response.") from exc
+
         output = _extract_output_text(data)
         if not output:
             raise UpstreamServiceError("Cloudflare AI returned an empty response payload.")
@@ -67,3 +73,29 @@ def _extract_output_text(payload: dict[str, Any]) -> str:
                     return first["text"]
 
     return ""
+
+
+def _extract_error_message(response: httpx.Response) -> str:
+    """Build a human-readable upstream error message from Cloudflare's response."""
+
+    try:
+        payload = response.json()
+    except json.JSONDecodeError:
+        text = response.text.strip()
+        return text or "No response body was provided."
+
+    if isinstance(payload, dict):
+        errors = payload.get("errors")
+        if isinstance(errors, list) and errors:
+            first_error = errors[0]
+            if isinstance(first_error, dict):
+                message = first_error.get("message")
+                if isinstance(message, str) and message.strip():
+                    return message.strip()
+
+        message = payload.get("message")
+        if isinstance(message, str) and message.strip():
+            return message.strip()
+
+    text = response.text.strip()
+    return text or "No response body was provided."
