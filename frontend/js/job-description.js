@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/api/v1/analyze-session";
+const API_URL = "/api/v1/analyze-session";
 const SESSION_CV_TOKEN_KEY = "jobmatch:cvSessionToken";
 const SESSION_CV_FILE_NAME_KEY = "jobmatch:cvFileName";
 const SESSION_RESULT_KEY = "jobmatch:lastResult";

@@ -5,6 +5,7 @@ from pathlib import Path
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
+from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from starlette.exceptions import HTTPException as StarletteHTTPException
@@ -28,10 +29,10 @@ app.mount("/ui", StaticFiles(directory=frontend_directory, html=True), name="ui"
 
 
 @app.get("/")
-async def root() -> dict[str, str]:
-    """Return basic API information for quick manual checks."""
+async def root() -> RedirectResponse:
+    """Route root requests to the static frontend."""
 
-    return {"name": "JobMatch AI API", "status": "ready"}
+    return RedirectResponse(url="/ui/")
 
 
 @app.get("/health")

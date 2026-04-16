@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/api/v1/analyze";
+const API_URL = "/api/v1/analyze";
 const MAX_FILE_SIZE_MB = 10;
 const SESSION_RESULT_KEY = "jobmatch:lastResult";
 const SESSION_SUBMISSION_KEY = "jobmatch:lastSubmission";
