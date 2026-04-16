@@ -1,0 +1,19 @@
+We are looking for a Junior Python Backend Developer to join our product team.
+
+Responsibilities:
+- Build and maintain FastAPI endpoints for internal and public services.
+- Work with JSON APIs, file uploads, and validation logic.
+- Collaborate with frontend developers to integrate UI flows.
+- Support deployment, debugging, and basic cloud configuration.
+
+Requirements:
+- Solid Python knowledge.
+- Experience with FastAPI or similar web frameworks.
+- Understanding of REST APIs, data validation, and async programming.
+- Familiarity with Git and basic testing workflows.
+
+Nice to have:
+- Experience with AI-assisted applications.
+- Exposure to cloud platforms or serverless deployments.
+
+This role is ideal for someone who wants to work on practical product features and learn modern backend development in a small team.
